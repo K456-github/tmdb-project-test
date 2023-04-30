@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Filtermovie from './Filtermovie'
-import Movie from './Movie'
+import Filtermovie from './Filtermovie.jsx'
+import Movie from './Movie.jsx'
 import { motion } from "framer-motion"
-import Intro from './Intro'
+import Intro from './Intro.jsx'
 import 'animate.css';
 
 
