@@ -1,0 +1,297 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Lato:wght@400;700;900&family=Libre+Baskerville:wght@400;700&family=Righteous&family=Tillana:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap');
+
+
+.showcase{
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    
+}
+.showcase .content{
+    position: relative;
+    z-index: 1;
+    /* max-width: 1000px ; */
+    margin: 0 auto;
+    text-align: center;
+}
+.showcase .content h2{
+    margin-top: 50px;
+    font-size: 3.5rem ;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+.showcase .content h2:hover{
+    box-shadow: 0 0 1rem 0 rgb(0, 0, 0.2);
+    background-size: cover;
+    opacity: 1;
+    background-color: #ffffff10;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    transition: 0.3s all ease-in-out;
+}
+
+.introbtn {
+    transform: translate(-50%, 25%);
+    border-radius: 1rem;
+    border: none;
+    background-color: #c09778;
+    box-shadow: 0 0 1rem 0 rgb(0, 0, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    transition: 0.5s ease-out;
+   }
+   .showcase .content h2:hover .introbtn {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
+
+.custombg{
+    background: #000000;
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+    background: linear-gradient(to right, #434343, #000000);
+    
+}
+.navbar{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.input2{
+    
+}
+.socialitem{
+    position: relative;
+    transition: 0.4s all ease;
+}
+.socialitem:hover{
+    color: #f65c5c;
+    transition: 0.4s all ease;
+}
+.socialitem::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background: linear-gradient(to right, #ef629a 0%, #eecda1 100%);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+.socialitem:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+}
+
+.mainpgbg{
+    /* background: linear-gradient(115deg, #fdfcfb, #e2d1c3); */
+    /* background: linear-gradient(115deg, #d16ba5, #86a8e7, #5ffbf1);
+   background-blend-mode: multiply; */
+     
+}
+.fontstyle{
+    /* -webkit-text-stroke: #f65c5c; */
+}
+.iii{
+    font-family: 'Dongle', sans-serif;
+    font-weight: 500z;
+}
+
+.customfonts{
+    font-family: 'Tillana', cursive;
+}
+.detailfont{
+    font-family: 'EB Garamond', serif;
+}
+.fontcolor{
+    background: linear-gradient(to right, #ef629a 0%, #eecda1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080710;
+}
+.background{
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+
+form{
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 40px 35px;
+}
+form *{
+    font-family: 'Tillana', cursive;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+}
+input:focus {
+    background-color: rgb(106, 104, 104);
+    transform: scale(1);
+    box-shadow: 13px 13px 100px #969696,
+               /* -13px -13px 100px #ffffff; */
+  }
+::placeholder{
+    color: #e5e5e5;
+}
+.btn{
+    margin-top: 40px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* home */
+
+.card {
+    position: relative;
+    /* width: 220px;
+    height: 320px; */
+    background: linear-gradient(to right, #434343, #2b2b2b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .card::before,
+  .card::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #ffffff10;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    transition: all 0.5s;
+  }
+  
+  /* .card::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+  } */
+  
+  .card::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+  }
+  
+  /* .card:hover::before, */
+  .card:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    transition: all 0.5s;
+  }
+  
+  .card:hover:after {
+    content: "";
+    color: white;
+  }
+
+  .cardbtn {
+    transform: translate(-50%, 15%);
+    /* border-radius: 1rem; */
+    border: none;
+    /* background-color: #c09778; */
+    /* box-shadow: 0 0 1rem 0 rgb(0, 0, 0.2); */
+    color: #fff;
+    /* font-size: 1.2rem; */
+    /* padding: .5rem 1rem; */
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    transition: 0.3s ease-out;
+    z-index: 6;
+   }
+  .card:hover  .cardbtn{
+    transform: translate(-50%, 10%);
+    opacity: 1;
+   }
